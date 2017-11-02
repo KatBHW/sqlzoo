@@ -1,0 +1,16 @@
+SELECT COUNT(id) FROM stops;
+
+SELECT id FROM stops
+WHERE name = 'Craiglockhart';
+
+SELECT id, name FROM stops JOIN route
+ON id = stop
+WHERE num = 4 AND company = 'LRT';
+
+SELECT company, num, COUNT(*)
+FROM route WHERE stop=149 OR stop=53
+GROUP BY company, num
+HAVING COUNT(*) > 1;
+
+NEED TO FINISH THIS.
+
